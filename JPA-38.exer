@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main (){
+	setlocale(LC_ALL, "Portuguese");
+	
+	
+printf("\n****************************************\n");
+printf("*Aluna: IORRANA DE SOUZA HIPOLITO - RA: 0025980 *");
+printf("\n*Programa PJA-38 - Pedir senha até acertar *");
+printf("\n****************************\n");
+
+    // Definimos a senha correta do sistema
+    int senhaCorreta = 1985;
+    int senhaDigitada;
+
+    printf("--- SISTEMA DE SEGURANCA ---\n");
+
+    // O laço vai rodar REPETIDAMENTE até a senha ser igual a 1234
+    do {
+        printf("Digite a senha de acesso: ");
+        scanf("%d", &senhaDigitada);
+
+        // Se a senha estiver errada, avisa o usuário
+        if (senhaDigitada != senhaCorreta) {
+            printf("Senha incorreta! Acesso negado.\n\n");
+        }
+
+    } while (senhaDigitada != senhaCorreta); // Continua repetindo ENQUANTO for diferente
+
+    // Se saiu do laço, significa que a senha digitada foi a correta
+    printf("\n-----------------------------\n");
+    printf("Senha Correta!\n");
+    printf("ACESSO PERMITIDO. Bem-vindo!\n");
+    printf("-----------------------------\n");
+
+    return 0;
+}
