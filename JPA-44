@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+
+int main() {
+    
+    
+    printf("\n****************************************\n");
+    printf("*Aluna: IORRANA DE SOUZA HIPOLITO - RA: 0025980 *");
+    printf("\n*Programa PJA-42 - Quantidade de números ímpares digitados  *");
+    printf("\n****************************\n");
+
+    int numero, copiaNumero, contadorDigitos = 0;
+
+    printf("Digite um numero positivo: ");
+    scanf("%d", &numero);
+
+    copiaNumero = numero;
+
+    // Caso especial se o usuário digitar 0
+    if (copiaNumero == 0) {
+        contadorDigitos = 1;
+    } else {
+        // Vai dividindo o número por 10 até que ele vire 0
+        while (copiaNumero > 0) {
+            contadorDigitos++;
+            copiaNumero /= 10; // Remove o último dígito
+        }
+    }
+
+    printf("O numero %d possui %d digitos.\n", numero, contadorDigitos);
+
+    return 0;
+}
