@@ -1,0 +1,32 @@
+	#include <stdio.h>
+
+int main() {
+    int numero, i = 1, divisores = 0;
+
+	
+printf("\n****************************************\n");
+printf("*Aluna: IORRANA DE SOUZA HIPOLITO - RA: 0025980 *");
+printf("\n*Programa PJA-41 *");
+printf("\n****************************\n");
+
+
+    printf("Digite um numero para verificar se e primo: ");
+    scanf("%d", &numero);
+
+    // Conta quantos divisores o número possui entre 1 e ele mesmo
+    while (i <= numero) {
+        if (numero % i == 0) {
+            divisores++;
+        }
+        i++;
+    }
+
+    // Um número primo possui exatamente 2 divisores (1 e ele mesmo)
+    if (divisores == 2) {
+        printf("O numero %d e PRIMO.\n", numero);
+    } else {
+        printf("O numero %d NAO e PRIMO.\n", numero);
+    }
+
+    return 0;
+}
