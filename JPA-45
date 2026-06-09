@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main (){
+	
+	printf("\n***************************\n");
+printf("*Aluna: IORRANA DE SOUZA HIPOLITO - RA: 0025980 *");
+printf("\n*Programa FBR-45 -  Menu até escolher sair*");
+printf("\n****************************\n");
+
+    int opcao = 0;
+
+    while (opcao != 3) {
+        printf("=== CAIXA ELETRONICO ===\n");
+        printf("1 - Verificar Saldo\n");
+        printf("2 - Sacar Dinheiro\n");
+        printf("3 - Sair\n");
+        printf("Escolha uma opcao: ");
+        scanf("%d", &opcao);
+
+        switch (opcao) {
+            case 1:
+                printf("\n[Saldo] Seu saldo atual e R$ 1.500,00\n\n");
+                break;
+            case 2:
+                printf("\n[Saque] Opcao indisponivel no momento.\n\n");
+                break;
+            case 3:
+                printf("\nSaindo do sistema... Obrigado!\n");
+                break;
+            default:
+                printf("\nOpcao invalida! Tente novamente.\n\n");
+        }
+    }
+
+    return 0;
+}
