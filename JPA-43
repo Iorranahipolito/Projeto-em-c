@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main (){
+	
+	printf("\n***************************\n");
+printf("*Aluna: IORRANA DE SOUZA HIPOLITO - RA: 0025980 *");
+printf("\n*Programa FBR-43 -  Soma dos pares entre 1 e 100  *");
+printf("\n****************************\n");
+
+	int numero = 1, soma = 0;
+
+    while (numero <= 100) {
+        if (numero % 2 == 0) {
+            soma += numero; // Soma o número se ele for par
+        }
+        numero++;
+    }
+
+    printf("A soma de todos os numeros pares entre 1 e 100 e: %d\n", soma);
+
+    return 0;
+}
