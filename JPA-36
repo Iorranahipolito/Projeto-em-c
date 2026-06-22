@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main()
+{
+setlocale(LC_ALL, "portuguese");
+printf("\n**********************************************************************************************************");
+printf("\n*Aluno:IORRANA DE SOUZA HIPÓLITO- RA: 0025980                                                            *");
+printf("\n*Programa FBR-36 - Contar até 10 com while                                                               *");
+printf("\n********************************************************************************************************\n");
+
+int i = 1;
+
+while(i <= 10) {
+    printf("%d\n", i);
+    i++;
+}
+
+
+return 0;
+}
