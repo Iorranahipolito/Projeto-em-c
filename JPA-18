@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main()
+{
+setlocale(LC_ALL, "portuguese");
+printf("\n**********************************************************************************************************");
+printf("\n*Aluno:IORRANA DE SOUZA HIPÓLITO - RA: 0025980                                                           *");
+printf("\n*Programa FBR-18 - Login simples                                                                         *");
+printf("\n********************************************************************************************************\n");
+
+char usuario[20], senha[20];
+
+printf("Usuario: ");
+scanf("%s", usuario);
+
+printf("Senha: ");
+scanf("%s", senha);
+
+if (usuario == "admin" && senha == "1234")
+    printf("Acesso permitido\n");
+else
+    printf("Acesso negado\n");
+
+return 0;
+}
