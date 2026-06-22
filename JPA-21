@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main()
+{
+setlocale(LC_ALL, "portuguese");
+printf("\n**********************************************************************************************************");
+printf("\n*Aluno: IORRANA DE SOUZA HIPÓLITO - RA:0025980                                                          *");
+printf("\n*Programa FBR-21 - NUmero positivo ou negativo                                                           *");
+printf("\n********************************************************************************************************\n");
+
+float num;
+printf("Digite um numero: ");
+scanf("%f", &num);
+
+if (num > 0)
+    printf("Positivo\n");
+else if (num < 0)
+    printf("Negativo\n");
+else
+    printf("Zero\n");
+
+return 0;
+}
