@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main()
+{
+setlocale(LC_ALL, "portuguese");
+printf("\n**********************************************************************************************************");
+printf("\n*Aluno: IORRANA DE SOUZA HIPÓLITO - RA:025980                                                                 *");
+printf("\n*Programa FBR-15 - Quantas caixas cabem dentro do caminhão                                               *");
+printf("\n**********************************************************************************************************\n");
+
+float altCam, largCam, compCam;
+float altCx, largCx, compCx;
+int qtd;
+
+printf("Digite a Altura, largura e comprimento do caminhao: ");
+scanf("%f %f %f", &altCam, &largCam, &compCam);
+
+printf("Digite a Altura, largura e comprimento da caixa: ");
+scanf("%f %f %f", &altCx, &largCx, &compCx);
+
+qtd = (int)(altCam / altCx) *
+      (int)(largCam / largCx) *
+      (int)(compCam / compCx);
+
+printf("Quantidade de caixas: %d\n", qtd);
+
+
+return 0;
+}
