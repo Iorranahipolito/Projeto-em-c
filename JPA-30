@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main()
+{
+setlocale(LC_ALL, "portuguese");
+printf("\n**********************************************************************************************************");
+printf("\n*Aluno: IORRANA DE SOUZA HIPÓLITO - RA: 0025980                                                          *");
+printf("\n*Programa FBR-30 -  Fatorial de um número                                                                *");
+printf("\n********************************************************************************************************\n");
+
+int n, i;
+long long fat = 1;
+printf("Digite um numero: ");
+scanf("%d", &n);
+
+for(i = 1; i <= n; i++)
+    fat *= i;
+
+printf("Fatorial = %lld\n", fat);
+
+return 0;
+}
