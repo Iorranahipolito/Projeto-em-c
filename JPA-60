@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main() {
+    setlocale(LC_ALL, "Portuguese");
+
+    printf("\n*****************************************************************");
+    printf("\n* Aluno: IORRANA DE SOUZA HIPOLITO - RA: 0025980                            *");
+    printf("\n* Programa JPA-60: Validador de Dias Úteis (SWITCH)              *");
+    printf("\n*****************************************************************\n\n");
+
+    int diaSemana;
+
+    printf("Digite o número correspondente ao dia (1=Dom, 2=Seg, ..., 7=Sáb): ");
+    scanf("%d", &diaSemana);
+
+    printf("\nStatus da Catraca: ");
+    switch (diaSemana) {
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+        case 6:
+            printf("Dia Útil. Acesso liberado para o trabalho.\n");
+            break;
+        case 1:
+        case 7:
+            printf("Fim de Semana. Prédio fechado.\n");
+            break;
+        default:
+            printf("Número de dia inválido.\n");
+            break;
+    }
+
+    return 0;
+}
