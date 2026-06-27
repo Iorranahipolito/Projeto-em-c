@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main() {
+    setlocale(LC_ALL, "Portuguese");
+
+    printf("\n*****************************************************************");
+    printf("\n* Aluno: Iorrana de Souzsa Hipólito RA: 0025980                 *");
+    printf("\n* Programa JPA-51: Contagem regressiva 10 a 1 (DO...WHILE)      *");
+    printf("\n*************************************************************\n\n");
+
+    int i = 10;
+
+    printf("Contagem Regressiva para a Corrida:\n");
+    do {
+        printf("%d\n", i);
+        i--;
+    } while (i >= 1);
+
+    printf("LARGADA!\n");
+
+    return 0;
+}
