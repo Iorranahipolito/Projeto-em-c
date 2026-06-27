@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main() {
+    setlocale(LC_ALL, "Portuguese");
+
+    printf("\n*****************************************************************");
+    printf("\n* Aluno: Iorrana de Souza Hipólito RA:0025980                   *");
+    printf("\n* Programa JPA-50: Número positivo obrigatório (DO...WHILE)     *");
+    printf("\n*************************************************************\n\n");
+
+    float deposito;
+
+    do {
+        printf("Informe o valor do depósito bancário: R$ ");
+        scanf("%f", &deposito);
+
+        if (deposito <= 0) {
+            printf("Erro: O sistema aceita somente valores positivos.\n\n");
+        }
+
+    } while (deposito <= 0);
+
+    printf("\nDepósito processado com sucesso!\n");
+
+    return 0;
+}
