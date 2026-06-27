@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main() {
+    setlocale(LC_ALL, "Portuguese");
+
+    printf("\n*****************************************************************");
+    printf("\n* Aluno: IORRANA DE SOUZA HIPOLITO - RA: 0025980                *");
+    printf("\n* Programa JPA-54: Validar número entre 1 e 5 (DO...WHILE)      *");
+    printf("\n*****************************************************************\n\n");
+
+    int nivelDificuldade;
+
+    do {
+        printf("Selecione o nível de dificuldade do jogo (Entre 1 e 5): ");
+        scanf("%d", &nivelDificuldade);
+
+        if (nivelDificuldade < 1 || nivelDificuldade > 5) {
+            printf("Nível inválido! Tente um valor dentro do intervalo.\n\n");
+        }
+
+    } while (nivelDificuldade < 1 || nivelDificuldade > 5);
+
+    printf("\nNível %d configurado com sucesso! Bom jogo.\n", nivelDificuldade);
+
+    return 0;
+}
