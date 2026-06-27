@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main() {
+    setlocale(LC_ALL, "Portuguese");
+
+    printf("\n*****************************************************************");
+    printf("\n* Aluno:IORRANA DE SOUZA HIPOLITO - RA: 0025980                 *");
+    printf("\n* Programa JPA-56: Totem Fast-Food (SWITCH...CASE)              *");
+    printf("\n*************************************************************\n\n");
+
+    int comboEscolhido;
+
+    printf("--- TOTEM DE ATENDIMENTO ---\n");
+    printf("1 - Combo Hambúrguer\n");
+    printf("2 - Combo Pizza Brotinho\n");
+    printf("3 - Combo Salada\n");
+    printf("4 - Combo Balde de Frango\n");
+    printf("Digite o número do seu pedido (1 a 4): ");
+    scanf("%d", &comboEscolhido);
+
+    printf("\nResultado do pedido: ");
+    switch (comboEscolhido) {
+        case 1:
+            printf("Combo Hambúrguer + Batata + Refri - R$ 30,00\n");
+            break;
+        case 2:
+            printf("Combo Pizza Brotinho + Refri - R$ 25,00\n");
+            break;
+        case 3:
+            printf("Combo Salada + Suco Natural - R$ 22,00\n");
+            break;
+        case 4:
+            printf("Combo Balde de Frango + Molho - R$ 35,00\n");
+            break;
+        default:
+            printf("Opção inválida! Escolha de 1 a 4.\n");
+            break;
+    }
+
+    return 0;
+}
