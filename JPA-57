@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <string.h>
+
+int main() {
+    setlocale(LC_ALL, "Portuguese");
+
+    printf("\n*****************************************************************");
+    printf("\n*  IORRANA DE SOUZA HIPOLITO - RA: 0025980                         *");
+    printf("\n* Programa JPA-57: Lógica do Urso (Simulação Switch em String)  *");
+    printf("\n*****************************************************************\n\n");
+
+    char corAcendida[20];
+
+    printf("Qual cor acendeu na barriga do urso? (Verde/Amarelo/Vermelho): ");
+    scanf("%s", corAcendida);
+
+    // Nota técnica: Linguagem C nativa não faz 'switch' direto com Strings/Textos.
+    // Usamos uma árvore de if/else baseada em strcmp para replicar o comportamento pedido de forma limpa.
+    printf("\nFala do Brinquedo: ");
+    if (strcasecmp(corAcendida, "Verde") == 0) {
+        printf("\"Vamos brincar lá fora!\"\n");
+    } else if (strcasecmp(corAcendida, "Amarelo") == 0) {
+        printf("\"Estou ficando com soninho...\"\n");
+    } else if (strcasecmp(corAcendida, "Vermelho") == 0) {
+        printf("\"Estou com fome, hora do lanche!\"\n");
+    } else {
+        printf("Cor desconhecida (O urso apenas pisca as luzes).\n");
+    }
+
+    return 0;
+}
