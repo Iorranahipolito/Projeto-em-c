@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main() {
+    setlocale(LC_ALL, "Portuguese");
+
+    printf("\n*****************************************************************");
+    printf("\n* Aluno:  IORRANA DE SOUZA HIPOLITO - RA: 0025980               *");
+    printf("\n* Programa JPA-55: Mostrar maior positivo (DO...WHILE)          *");
+    printf("\n*************************************************************\n\n");
+
+    float notaDigitada;
+    float maiorNota = -1.0; // Inicia com um valor menor que as notas possíveis
+
+    do {
+        printf("Insira a nota do participante (ou um valor negativo para sair): ");
+        scanf("%f", &notaDigitada);
+
+        if (notaDigitada > maiorNota && notaDigitada >= 0) {
+            maiorNota = notaDigitada;
+        }
+
+    } while (notaDigitada >= 0);
+
+    if (maiorNota != -1.0) {
+        printf("\nPesquisa encerrada. A maior nota registrada foi: %.2f\n", maiorNota);
+    } else {
+        printf("\nNenhum número positivo foi digitado.\n");
+    }
+
+    return 0;
+}
