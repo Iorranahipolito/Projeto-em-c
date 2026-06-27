@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main() {
+    setlocale(LC_ALL, "Portuguese");
+
+    printf("\n*****************************************************************");
+    printf("\n* Aluno:IORRANA DE SOUZA HIPÓLITO RA:0025980                    *");
+    printf("\n* Programa JPA-53: Confirmar saída com 's' (DO...WHILE)         *");
+    printf("\n*************************************************************\n\n");
+
+    char opcao;
+
+    do {
+        printf("--- SISTEMA DE CADASTRO ATIVO ---\n");
+        printf("Executando operações do menu...\n");
+        
+        printf("\nDeseja realmente sair do sistema? (Pressione 's' para sim): ");
+        // O espaço antes de %c serve para ignorar o caractere Enter (\n) anterior
+        scanf(" %c", &opcao);
+        printf("\n");
+
+    } while (opcao != 's' && opcao != 'S');
+
+    printf("Saindo do painel... Concluído!\n");
+
+    return 0;
+}
