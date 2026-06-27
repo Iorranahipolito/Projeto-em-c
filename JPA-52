@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main() {
+    setlocale(LC_ALL, "Portuguese");
+
+    printf("\n*****************************************************************");
+    printf("\n* Aluno:Iorrana De Souza Hipólito RA:0025980                    *");
+    printf("\n* Programa JPA-52: Soma até múltiplo de 10 (DO...WHILE)         *");
+    printf("\n*************************************************************\n\n");
+
+    int numero;
+    int somaTotal = 0;
+
+    do {
+        printf("Digite um valor numérico para a pontuação: ");
+        scanf("%d", &numero);
+        
+        somaTotal += numero;
+
+    } while (numero % 10 != 0);
+
+    printf("\nNúmero múltiplo de 10 digitado. Pontuação final somada: %d\n", somaTotal);
+
+    return 0;
+}
