@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main() {
+    setlocale(LC_ALL, "Portuguese");
+
+    printf("\n*****************************************************************");
+    printf("\n* Aluno:IORRANA DE SOUZA HIPOLITO - RA: 0025980 *");
+    printf("\n* Programa JPA-59: Robô Assistente de Direção (SWITCH)          *");
+    printf("\n***************************************************************\n\n");
+
+    char direcaoPlaca;
+
+    printf("Insira a letra maiúscula identificada pelo robô (N, S, L, O): ");
+    scanf(" %c", &direcaoPlaca);
+
+    printf("\nComando do sistema: ");
+    switch (direcaoPlaca) {
+        case 'N':
+            printf("\"Seguir para o Norte.\"\n");
+            break;
+        case 'S':
+            printf("\"Seguir para o Sul.\"\n");
+            break;
+        case 'L':
+            printf("\"Virar à Leste (Direita).\"\n");
+            break;
+        case 'O':
+            printf("\"Virar à Oeste (Esquerda).\"\n");
+            break;
+        default:
+            printf("\"Comando inválido! Pare o robô.\"\n");
+            break;
+    }
+
+    return 0;
+}
