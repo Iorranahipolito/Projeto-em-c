@@ -12,11 +12,20 @@ printf("\n*Programa FBR-49 - Pedir senha até acertar *");
 printf("\n****************************\n");
 
 
- int numero = 1;
- 
- while (numero <=10) {
- 	printf("Numero: %d\n", numero);
- 	numero++;
- }
-	return 0;
+    int senhaDigitada;
+    const int SENHA_CORRETA = 5423; 
+
+    do {
+        printf("Digite a senha de acesso: ");
+        scanf("%d", &senhaDigitada);
+
+        if (senhaDigitada != SENHA_CORRETA) {
+            printf("Senha incorreta! Tente novamente.\n\n");
+        }
+
+    } while (senhaDigitada != SENHA_CORRETA);
+
+    printf("Acesso liberado!\n");
+
+    return 0;
 }
