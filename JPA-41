@@ -6,7 +6,7 @@ int main() {
 	
 printf("\n****************************************\n");
 printf("*Aluna: IORRANA DE SOUZA HIPOLITO - RA: 0025980 *");
-printf("\n*Programa PJA-41 *");
+printf("\n*Programa PJA-41 Número primo com laço WHILE*");
 printf("\n****************************\n");
 
 
